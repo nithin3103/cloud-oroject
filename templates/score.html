@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="border border-3 border-success"></div>
+                <div class="card  bg-white shadow p-5">
+                    <div class="mb-4 text-center">
+                        <img src="{% static 'images/re.png' %}" alt="results"/>
+                    </div>
+                    <div class="text-center">
+
+                      <h5 class="card-title">You scored: {{score}}</h5>
+                <p class="card-text">Percentage: {{per}}%</p>
+                <p class="card-text">Correct answers: {{score}}</p>
+                <p class="card-text">Incorrect answers: {{wrong}}</p>
+                <p class="card-text">Total questions: {{total}}</p>
+                      <h1 class="card-title">Thank you for taking the quiz !</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

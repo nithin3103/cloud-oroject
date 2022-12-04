@@ -1,0 +1,113 @@
+body{
+    background: #A5CFB2 url("/static/img/bkg.png");
+    background-size: 100%;
+}
+html,body{
+    height : 100%;
+}
+
+/*base */
+.navbar-brand{
+    font-family: 'Abril+Fatface', cursive, sans-serif;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95;
+    letter-spacing: 3px;
+}
+.navbar-custom { /* Navbar color */
+    background-color: #3eb194;
+
+}
+.navbar a{ /* Links color of navbar */
+    color: white !important;
+}
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container{
+ height : 100%;
+}
+
+img.user-detail {
+    border-radius:50%;
+    float:left;
+}
+
+/*login*/
+.card{
+background-color: #DED9D5;
+padding:20px; /* inside margin kind */
+margin:30px; /* outside spacing b/w cards and other components.*/
+}
+.fab{
+    font-size: 43px;
+    margin-right: 10px;
+}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px;color: #2d333d;} /**/
+
+ .or-seperator {
+        margin: 45px 0 0px;
+        text-align: center;
+        border-top: 1px solid #e0e0e0;
+    }
+    .or-seperator b {
+        padding: 0 1    0px;
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+		text-align: center;
+		line-height: 40px;
+		background: #fff;
+		display: inline-block;
+        border: 1px solid #e0e0e0;
+		border-radius: 50%;
+        position: relative;
+        top: -22px;
+        z-index: 1;
+    }
+
+h6{
+margin-top:15px;}
+
+h3{
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700; color: #2d333d;
+  text-transform: uppercase;
+  word-spacing: 1px; letter-spacing:2px;
+  padding-top:20px;}
+
+/* actions */
+.action .date {
+    font-style:italic;
+    color:#ccc;
+}
+
+.count {
+         color:#aaa;
+}
+.countline{
+ margin:10px 0px;
+}
+.image-info div {
+    padding:20px 0;
+    overflow:auto;
+}
+.post-footer{
+    margin-top:30px;
+}
+div.user-sidebar{
+height:500px;
+}
+
+.card-title{
+   font-size: 22px;
+  text-transform: none;
+  font-weight: bold;
+  font-style: italic; font-family: "Playfair Display","Bookman",serif;
+  color:#246472;
+  letter-spacing:none;}
+.question{
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Loads the path to static files -->
+	{% load static %}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+</head>
+
+<body>
+{% load static %}
+<div class="container-fluid">
+	<nav class="navbar navbar-expand-sm navbar-custom navbar-light">
+		<!-- Brand/logo -->
+		<a class="navbar-brand custom" href="{% url 'index' %}"><h3>Quizzz</h3></a>
+
+		{% if user.is_authenticated %}
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span>
+	  </button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link active">Notifications</a>
+				</li>
+				{% if user.is_superuser %}
+				<li class="nav-item">
+					<a class="nav-link active" href="{% url 'admin_view' %}">Admin</a>
+				</li>
+				{% endif %}
+				<li class="nav-item">
+					<a class="nav-link active" href="{% url 'logout' %}">logout</a>
+				</li>
+			</ul>
+		</div>
+		{% endif %}
+	</nav>
+</div>
+
+{% block body %}
+{% endblock %}
+<script>
+{% block js %}
+{% endblock %}
+</script>
+</body>
+</html>

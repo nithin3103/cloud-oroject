@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <form method="POST"> {% csrf_token %}
+        <select id="program" name="program" class="program-dropdown" style="width:400px;">
+            {% for program in questions %}
+<!--            <option value="{{ program.id }}">{{ program.question }}</option>-->
+            <option value="{{ program.id }}">{{ program.question }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Save</button>
+    </form>
+</div>
+{% endblock %}
